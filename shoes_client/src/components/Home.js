@@ -26,7 +26,7 @@ class Home extends React.Component {
     });
   };
   fetchShoes = async () => {
-    let response = await fetch("https://sneakfreaks-backend.herokuapp.com/shoes");
+    let response = await fetch("https://sneakfreaks-backend.herokuapp.com/");
     let data = await response.json();
     console.log(data);
     this.setState({ shoes: data });
