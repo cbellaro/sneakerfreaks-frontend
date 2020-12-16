@@ -26,14 +26,14 @@ class Home extends React.Component {
     });
   };
   fetchShoes = async () => {
-    let response = await fetch("http://localhost:3000/shoes");
+    let response = await fetch("https://sneakfreaks-backend.herokuapp.com/shoes");
     let data = await response.json();
     console.log(data);
     this.setState({ shoes: data });
   };
 
   handleUpdate = async updateData => {
-    let response = await fetch(`http://localhost:3000/shoes/${updateData.id}`, {
+    let response = await fetch(`https://sneakfreaks-backend.herokuapp.com/shoes/${updateData.id}`, {
       body: JSON.stringify(updateData),
       method: "PUT",
       headers: {
@@ -47,7 +47,7 @@ class Home extends React.Component {
   };
 
   handleDelete = async id => {
-    let response = await fetch(`http://localhost:3000/shoes/${id}`, {
+    let response = await fetch(`https://sneakfreaks-backend.herokuapp.com/shoes/${id}`, {
       method: "DELETE",
       headers: {
         Accept: "application/json, text/plain, */*",
