@@ -11,7 +11,7 @@ class Home extends React.Component {
   }
 
   handleCreate = async createdData => {
-    let response = await fetch("http://localhost:3000/shoes", {
+    let response = await fetch("https://sneakfreaks-backend.herokuapp.com/shoes", {
       body: JSON.stringify(createdData),
       method: "POST",
       headers: {
